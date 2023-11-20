@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+    transition: 1ms;
+}
+
+img:hover{
+    cursor: pointer;
+}
+img:active{
+    transform: scale(0.8)
+}
+
+
+#fl_ori {
+    position: fixed;
+    top: 100px;
+    right: 300px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveFlOri 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveFlOri {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px); /* Adjust the distance as needed */
+    }
+}
+
