@@ -3,15 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoowiki</title>
+    <title>An Aquarium</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img id="fl_ori" src="fl_ori.png" alt="" onclick="showFlounder()">
+    <img id="titleaqua" class="title" src="titleaqua.png">
+    <div id="para" style="display: none;">This website is an pixel aquarium, you can click on any fish to see more information and the real images of them. It's your fishing helper, a location and time instruction tool which helps you catch the species you want. All animals came from StarDew Valley. No animals were harmed during transportation!</div>
+    
+    <div id="overlay"></div>
+    <img id="housepink" class="house" src="/image/housepink.png" onclick="printPage()">
 
-    <img id="flounder" src="flounder.png" style="display: none;" alt="" onclick="changeImage()">
-    <img id="flounder_pix" src="" alt="" style="display: none;">
-    <script src="script.js"></script>
+
+    <img id="fl_ori" src="/image/fl_ori.png" alt="Flounder Original" >
+
+    <img id="puf_ori" src="/image/puf_ori.png" alt="Puffer Original" >
+
+
+    <img id="tuna_sdv" src="/image/tuna_sdv.png" >
+
+    <img id="octopus_sdv" src="/image/octopus_sdv.png">
+
+    <img id="cucumber_sdv" src="/image/cucumber_sdv.png">
+
+    <img id="tilapia_sdv" src="/image/tilapia_sdv.png">
+
+
+    <img id="lionfish_sdv" src="/image/lionfish_sdv.png">
+
+    <img id="seaweed_sdv" src="/image/seaweed_sdv.png" alt="" >
+
+    <img id="redmullet_sdv" src="/image/redmullet_sdv.png">
+    <img id="redmu_pix" src="/image/redmu_pix.png" style="display: none;"  >
+
+    <img id="angler_sdv" src="/image/angler_sdv.png" alt="angler_sdv" >
+
+    <img id="shrimp_sdv" src="/image/shrimp_sdv.png" alt="shrimp_sdv" >
+
+    <img id="fishpole" src="fishpole.png">
+
+    <script src="script.js"> </script>
 
 </body>
 </html>

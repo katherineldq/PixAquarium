@@ -1,0 +1,292 @@
+let isFlounderVisible = false;
+let ispufVisible = false;
+let istunaVisible = false;
+let isoctopusVisible = false;
+
+function showFlounder(a, b) {
+    console.log(a, b);
+    let flounderImage = document.getElementById(a);
+    let flounderPixImage = document.getElementById(b);
+
+    if (!isFlounderVisible) {
+        flounderImage.style.display = 'block';
+        flounderPixImage.style.display = 'none';
+        isFlounderVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        flounderImage.style.position = 'fixed';
+        flounderImage.style.top = 'calc(30% - 40px)';
+        flounderImage.style.left = '50%';
+        flounderImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        flounderImage.style.display = 'none';
+        flounderPixImage.style.display = 'block';
+        isFlounderVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        flounderPixImage.style.position = 'fixed';
+        flounderPixImage.style.top = 'calc(30% - 40px)';
+        flounderPixImage.style.left = '50%';
+        flounderPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+    
+    showInfoBox('Flounder', 'It lives on the bottom, so both eyes are on top of its head.', 'North Sea', '2pm-8pm');
+}
+
+
+function changeImage(a, b, c) {
+    console.log(a, b, c)
+    let displayImage = document.getElementById(a);
+    if (displayImage.src.match(b)) {
+        displayImage.src = c;
+        // Make the image slightly bigger
+        displayImage.style.width = '400px'; // Adjust the width as needed
+        displayImage.style.height = 'auto';
+    } else {
+        displayImage.src = b;
+        // Reset the size to the original dimensions
+        displayImage.style.width = '100px';
+        displayImage.style.height = 'auto';
+
+        if (a === 'puffer') {
+            displayImage.style.width = '58px';
+        }
+
+        if (a === 'flounder') {
+            displayImage.style.width = '58px';
+        }
+
+        if (a === 'tuna') {
+            displayImage.style.width = '90px';
+        }
+
+        if (a === 'octopus') {
+            displayImage.style.width = '100px';
+        }
+    }
+}
+
+
+
+document.addEventListener('click', function (event) {
+    var clickedElement = event.target;
+
+    // Check if the clicked element is not the image or its ancestor
+    if (
+        !clickedElement.closest('#flounder_pix') &&
+        !clickedElement.closest('#puf_pix') &&
+        !clickedElement.closest('#tuna_pix') &&
+        !clickedElement.closest('#octopus_pix')
+    ) {
+        // Hide all images
+        document.getElementById('flounder_pix').style.display = 'none';
+        document.getElementById('puf_pix').style.display = 'none';
+        document.getElementById('tuna_pix').style.display = 'none';
+        document.getElementById('octopus_pix').style.display = 'none';
+    }
+});
+
+
+function showpuf(a, b) {
+    console.log(a, b);
+    let pufImage = document.getElementById(a);
+    let pufPixImage = document.getElementById(b);
+
+    if (!ispufVisible) {
+        pufImage.style.display = 'block';
+        pufPixImage.style.display = 'none';
+        ispufVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        pufImage.style.position = 'fixed';
+        pufImage.style.top = 'calc(30% - 40px)';
+        pufImage.style.left = '50%';
+        pufImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        pufImage.style.display = 'none';
+        pufPixImage.style.display = 'block';
+        ispufVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        pufPixImage.style.position = 'fixed';
+        pufPixImage.style.top = 'calc(30% - 40px)';
+        pufPixImage.style.left = '50%';
+        pufPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+}
+
+function showtuna(a, b) {
+    console.log(a, b);
+    let tunaImage = document.getElementById(a);
+    let tunaPixImage = document.getElementById(b);
+
+    if (!istunaVisible) {
+        tunaImage.style.display = 'block';
+        tunaPixImage.style.display = 'none';
+        istunaVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        tunaImage.style.position = 'fixed';
+        tunaImage.style.top = 'calc(30% - 40px)';
+        tunaImage.style.left = '50%';
+        tunaImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        tunaImage.style.display = 'none';
+        tunaPixImage.style.display = 'block';
+        istunaVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        tunaPixImage.style.position = 'fixed';
+        tunaPixImage.style.top = 'calc(30% - 40px)';
+        tunaPixImage.style.left = '50%';
+        tunaPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+}
+
+function showoctopus(a, b) {
+    console.log(a, b);
+    let octopusImage = document.getElementById(a);
+    let octopusPixImage = document.getElementById(b);
+
+    if (!isoctopusVisible) {
+        octopusImage.style.display = 'block';
+        octopusPixImage.style.display = 'none';
+        isoctopusVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        octopusImage.style.position = 'fixed';
+        octopusImage.style.top = 'calc(30% - 40px)';
+        octopusImage.style.left = '50%';
+        octopusImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        octopusImage.style.display = 'none';
+        octopusPixImage.style.display = 'block';
+        isoctopusVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        octopusPixImage.style.position = 'fixed';
+        octopusPixImage.style.top = 'calc(30% - 40px)';
+        octopusPixImage.style.left = '50%';
+        octopusPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+}
+
+let isSeaweedVisible = false;
+
+function showSeaweed(a, b) {
+    console.log(a, b);
+    let seaweedImage = document.getElementById(a);
+    let seaweedPixImage = document.getElementById(b);
+
+    if (!isSeaweedVisible) {
+        seaweedImage.style.display = 'block';
+        seaweedPixImage.style.display = 'none';
+        isSeaweedVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        seaweedImage.style.position = 'fixed';
+        seaweedImage.style.top = 'calc(30% - 40px)';
+        seaweedImage.style.left = '50%';
+        seaweedImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        seaweedImage.style.display = 'none';
+        seaweedPixImage.style.display = 'block';
+        isSeaweedVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        seaweedPixImage.style.position = 'fixed';
+        seaweedPixImage.style.top = 'calc(30% - 40px)';
+        seaweedPixImage.style.left = '50%';
+        seaweedPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+}
+
+let isTilapiaVisible = false;
+
+function showTilapia(a, b) {
+    console.log(a, b);
+    let tilapiaImage = document.getElementById(a);
+    let tilapiaPixImage = document.getElementById(b);
+
+    if (!isTilapiaVisible) {
+        tilapiaImage.style.display = 'block';
+        tilapiaPixImage.style.display = 'none';
+        isTilapiaVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        tilapiaImage.style.position = 'fixed';
+        tilapiaImage.style.top = 'calc(30% - 40px)';
+        tilapiaImage.style.left = '50%';
+        tilapiaImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        tilapiaImage.style.display = 'none';
+        tilapiaPixImage.style.display = 'block';
+        isTilapiaVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        tilapiaPixImage.style.position = 'fixed';
+        tilapiaPixImage.style.top = 'calc(30% - 40px)';
+        tilapiaPixImage.style.left = '50%';
+        tilapiaPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+}
+
+let isCucumberVisible = false;
+
+function showCucumber(a, b) {
+    console.log(a, b);
+    let cucumberImage = document.getElementById(a);
+    let cucumberPixImage = document.getElementById(b);
+
+    if (!isCucumberVisible) {
+        cucumberImage.style.display = 'block';
+        cucumberPixImage.style.display = 'none';
+        isCucumberVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        cucumberImage.style.position = 'fixed';
+        cucumberImage.style.top = 'calc(30% - 40px)';
+        cucumberImage.style.left = '50%';
+        cucumberImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        cucumberImage.style.display = 'none';
+        cucumberPixImage.style.display = 'block';
+        isCucumberVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        cucumberPixImage.style.position = 'fixed';
+        cucumberPixImage.style.top = 'calc(30% - 40px)';
+        cucumberPixImage.style.left = '50%';
+        cucumberPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+}
+
+let isLionfishVisible = false;
+
+function showLionfish(a, b) {
+    console.log(a, b);
+    let lionfishImage = document.getElementById(a);
+    let lionfishPixImage = document.getElementById(b);
+
+    if (!isLionfishVisible) {
+        lionfishImage.style.display = 'block';
+        lionfishPixImage.style.display = 'none';
+        isLionfishVisible = true;
+
+        // Center horizontally and higher above the vertical center
+        lionfishImage.style.position = 'fixed';
+        lionfishImage.style.top = 'calc(30% - 40px)';
+        lionfishImage.style.left = '50%';
+        lionfishImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    } else {
+        lionfishImage.style.display = 'none';
+        lionfishPixImage.style.display = 'block';
+        isLionfishVisible = false;
+
+        // Center horizontally and higher above the vertical center
+        lionfishPixImage.style.position = 'fixed';
+        lionfishPixImage.style.top = 'calc(30% - 40px)';
+        lionfishPixImage.style.left = '50%';
+        lionfishPixImage.style.transform = 'translateX(-50%) translateY(-30px)';
+    }
+}

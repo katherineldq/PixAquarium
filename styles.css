@@ -1,31 +1,33 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: aqua;
+body {
+    background-color: aqua; /* Background color as fallback */
+    background-image: url('image/final\ background\ 1.jpg'); /* Replace 'your-image.jpg' with the path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-img{
-    width: 100px;
-    height: 50px;
-    object-fit: cover;
-    transition: 1ms;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img:hover{
+img {
+    object-fit: cover;
+    transition: 100ms; /* Adjust the transition duration as needed */
+}
+
+img:hover {
     cursor: pointer;
 }
-img:active{
-    transform: scale(0.8)
-}
 
+img:active {
+    transform: scale(0.8);
+}
 
 #fl_ori {
     position: fixed;
@@ -42,7 +44,186 @@ img:active{
         transform: translateY(0);
     }
     100% {
-        transform: translateY(20px); /* Adjust the distance as needed */
+        transform: translateY(30px); /* Adjust the distance as needed */
     }
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
+
+#flounder, #flounder_pix {
+    position: absolute; /* 或者使用 absolute，根据需要 */
+    width: 100px;
+    height: 50px;
+}
+
+#puf_ori {
+    position: fixed;
+    bottom: 300px;
+    left: 400px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveFlOri 3s ease-in-out infinite alternate;
+}
+
+#puffer, #puf_pix {
+    width: 50px;
+    height: 50px;
+
+}
+
+#tuna_sdv {
+    position: fixed;
+    bottom: 100px;
+    right: 400px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+}
+
+#octopus_sdv {
+    position: fixed;
+    top: 300px;
+    right: 80px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+}
+
+#cucumber_sdv {
+    position: fixed;
+    top: 250px;
+    left: 80px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+}
+
+#lionfish_sdv {
+    position: fixed;
+    bottom: 100px;
+    left: 180px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+}
+
+#tilapia_sdv {
+    position: fixed;
+    bottom: 200px;
+    right: 180px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveFlOri 3s ease-in-out infinite alternate;
+}
+
+
+.title {
+    position: fixed;
+    top: 40px;
+    left: 30px;
+    width: 450px;
+    height: auto;
+}
+#para {
+    position: absolute;
+    width: 500px;
+    top: 10px; /* 调整这个值以确定文字距离 title2 的距离 */
+    left: 10px;
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+
+.house {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    bottom: 50px;
+    right: 120px;
+    transition: opacity 0.5s linear; /* 调整过渡时间和速度曲线 */
+    animation: rotate 4s infinite; /* 调整循环切换时间 */
+}
+
+@keyframes rotate {
+    0%, 25%, 50%, 75%, 100% {
+        opacity: 0;
+    }
+    20%, 40%, 60%, 80% {
+        opacity: 1;
+    }
+}
+
+#seaweed_sdv {
+    position: fixed;
+    bottom: 450px;
+    left: 220px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveFlOri 3s ease-in-out infinite alternate;
+}
+
+#redmullet_sdv{
+    position: fixed;
+    top: 200px;
+    left: 400px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+}
+
+#angler_sdv{
+    position: fixed;
+    top: 70px;
+    right: 600px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+}
+
+#shrimp_sdv{
+    position: fixed;
+    bottom: 70px;
+    left: 600px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveFlOri 3s ease-in-out infinite alternate;
+}
+
+#fishpole{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 48px;
+    height: 48px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the darkness */
+    z-index: 1; /* Adjust the z-index as needed */
 }
 
