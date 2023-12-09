@@ -19,51 +19,51 @@ document.getElementById('titleaqua').addEventListener('click', function() {
 });
 
 document.getElementById('fl_ori').addEventListener('click', function() {   
-    showInfoBox('Flounder', 'It lives on the bottom, so both eyes are on top of its head.', 'Spring/Summer', 'Anytime', '4-17 inches','/image/fl_ori.png', '/image/flounder.png');
+    showInfoBox('Flounder', 'It lives on the bottom, so both eyes are on top of its head.', 'Spring/Summer', 'Anytime', '4-17 inches','./image/fl_ori.png', './image/flounder.png');
 });
 
 document.getElementById('puf_ori').addEventListener('click', function() {    
-    showInfoBox('Pufferfish', 'Inflates when threatened.', 'Summer', '12pm-4pm', '1-37 inches', '/image/puf_ori.png', '/image/puffer.png');
+    showInfoBox('Pufferfish', 'Inflates when threatened.', 'Summer', '12pm-4pm', '1-37 inches', './image/puf_ori.png', './image/puffer.png');
 });
 
 document.getElementById('seaweed_sdv').addEventListener('click', function() {
-    showInfoBox('Seaweed', 'It can be used in cooking...', 'All seasons', 'Anytime','N/A', '/image/seaweed_sdv.png', '/image/seaweed.png');
+    showInfoBox('Seaweed', 'It can be used in cooking...', 'All seasons', 'Anytime','N/A', './image/seaweed_sdv.png', './image/seaweed.png');
 });
 
 document.getElementById('octopus_sdv').addEventListener('click', function() {
-    showInfoBox('Octopus', 'A mysterious and intelligent creature.', 'Summer', '6am-1pm', '12-49 inches','/image/octopus_sdv.png', '/image/octopus.png');
+    showInfoBox('Octopus', 'A mysterious and intelligent creature.', 'Summer', '6am-1pm', '12-49 inches','./image/octopus_sdv.png', './image/octopus.png');
 });
 
 document.getElementById('tuna_sdv').addEventListener('click', function() {
-    showInfoBox('Tuna', 'A large fish that lives in the ocean.', 'Winter/Summer', '6am-7pm', '12-61 inches','/image/tuna_sdv.png', '/image/tuna.png');
+    showInfoBox('Tuna', 'A large fish that lives in the ocean.', 'Winter/Summer', '6am-7pm', '12-61 inches','./image/tuna_sdv.png', './image/tuna.png');
 });
 
 document.getElementById('cucumber_sdv').addEventListener('click', function() {
-    showInfoBox('Sea Cucumber', 'A rare, purple variety of sea cucumber.', 'Summer/Fall;', '6pm-2am', '12-37 inches','/image/cucumber_sdv.png', '/image/cucumber.png');
+    showInfoBox('Sea Cucumber', 'A rare, purple variety of sea cucumber.', 'Summer/Fall;', '6pm-2am', '12-37 inches','./image/cucumber_sdv.png', './image/cucumber.png');
 });
 
 document.getElementById('tilapia_sdv').addEventListener('click', function() {
-    showInfoBox('Tilapia', 'A primarily vegetarian fish that prefers warm water.', 'Fall/Summer', '6am-1pm', '11-31 inches','/image/tilapia_ori.png', '/image/tilapia.png');
+    showInfoBox('Tilapia', 'A primarily vegetarian fish that prefers warm water.', 'Fall/Summer', '6am-1pm', '11-31 inches','./image/tilapia_ori.png', './image/tilapia.png');
 });
 
 document.getElementById('lionfish_sdv').addEventListener('click', function() {
-    showInfoBox('Lionfish', 'An aggressive, predatory fish with venomous spines.', 'All seasons', 'Anytime', '3-13 inches','/image/lionfish_sdv.png', '/image/lionfish.png');
+    showInfoBox('Lionfish', 'An aggressive, predatory fish with venomous spines.', 'All seasons', 'Anytime', '3-13 inches','./image/lionfish_sdv.png', './image/lionfish.png');
 });
 
 document.getElementById('redmullet_sdv').addEventListener('click', function() {
-    showInfoBox('Red Mullet', 'Long ago these were kept as pets.', 'Summer/Winter', '6am-7pm', '8-23 inches','/image/redmullet_sdv.png', '/image/redmullet.png');
+    showInfoBox('Red Mullet', 'Long ago these were kept as pets.', 'Summer/Winter', '6am-7pm', '8-23 inches','./image/redmullet_sdv.png', './image/redmullet.png');
 });
 
 document.getElementById('angler_sdv').addEventListener('click', function() {
-    showInfoBox('Ms.Angler', 'Uses a bioluminescent dangler to attract prey.', 'Fall', 'Anytime', '17-19 inches','/image/angler_sdv.png', '/image/angler.png');
+    showInfoBox('Ms.Angler', 'Uses a bioluminescent dangler to attract prey.', 'Fall', 'Anytime', '17-19 inches','./image/angler_sdv.png', './image/angler.png');
 });
 
 document.getElementById('shrimp_sdv').addEventListener('click', function() {
-    showInfoBox('Shrimp', 'A scavenger that feeds off the ocean floor. Widely prized for its meat.', 'All seasons', 'Anytime', '1-5 inches','/image/shrimp_sdv.png', '/image/shrimp.png');
+    showInfoBox('Shrimp', 'A scavenger that feeds off the ocean floor. Widely prized for its meat.', 'All seasons', 'Anytime', '1-5 inches','./image/shrimp_sdv.png', './image/shrimp.png');
 });
 
 document.getElementById('discus_sdv').addEventListener('click', function() {
-    showInfoBox('Discus', 'A brightly colored tropical fish that is popular in aquariums.', 'All seasons', 'Anytime', '2-10 inches','/image/discus_sdv.png', '/image/discus.png');
+    showInfoBox('Discus', 'A brightly colored tropical fish that is popular in aquariums.', 'All seasons', 'Anytime', '2-10 inches','./image/discus_sdv.png', './image/discus.png');
 });
 
 
