@@ -42,7 +42,7 @@ document.getElementById('tuna_sdv').addEventListener('click', function() {
 });
 
 document.getElementById('cucumber_sdv').addEventListener('click', function() {
-    showInfoBox('Cucumber', 'A rare, purple variety of sea cucumber.', 'Summer/Fall;', '6pm-2am', '12-37 inches','/image/cucumber_sdv.png', '/image/cucumber.png');
+    showInfoBox('Sea Cucumber', 'A rare, purple variety of sea cucumber.', 'Summer/Fall;', '6pm-2am', '12-37 inches','/image/cucumber_sdv.png', '/image/cucumber.png');
 });
 
 document.getElementById('tilapia_sdv').addEventListener('click', function() {
@@ -65,6 +65,10 @@ document.getElementById('shrimp_sdv').addEventListener('click', function() {
     showInfoBox('Shrimp', 'Uses a bioluminescent dangler to attract prey.', 'Fall', 'Anytime', '17-19 inches','/image/shrimp_sdv.png', '/image/shrimp.png');
 });
 
+document.getElementById('discus_sdv').addEventListener('click', function() {
+    showInfoBox('Discus', 'A brightly colored tropical fish that is popular in aquariums.', 'All seasons', 'Anytime', '2-10 inches','/image/discus_sdv.png', '/image/discus.png');
+});
+
 
 function showInfoBox(animal, message, season, time, big, leftImageSrc, rightImageSrc)  {
     if (isInfoBoxVisible && currentInfoBox) {
@@ -83,7 +87,7 @@ function showInfoBox(animal, message, season, time, big, leftImageSrc, rightImag
     infoBox.style.margin = '-300px 0 0 -300px';
     infoBox.style.width = '700px';
     infoBox.style.height = '500px';
-    infoBox.style.background = 'rgba(255, 255, 255, 0.75)';
+    infoBox.style.background = 'rgba(255, 255, 255, 0.85)';
     infoBox.style.borderRadius = '10px';
     infoBox.style.display = 'block';
 
@@ -189,7 +193,14 @@ document.getElementById('fishpole').addEventListener('click', function() {
         { name: 'Pufferfish', message: 'Inflates when threatened.', season: 'Summer', time: '12pm-4pm', size: 'Small', leftImageSrc: '/image/puf_ori.png', rightImageSrc: '/image/puffer.png' },
         { name: 'Octopus', message: 'A mysterious and intelligent creature.', season: 'Summer', time: '6am-1pm', size: '12-49 inches', leftImageSrc: '/image/octopus_sdv.png', rightImageSrc: '/image/octopus.png' },
         { name: 'Tuna', message: 'A large fish that lives in the ocean.', season: 'Winter/Summer', time: '6am-7pm', size: '12-61 inches', leftImageSrc: '/image/tuna_sdv.png', rightImageSrc: '/image/tuna.png' },
-        { name: 'Cucumber', message: 'A rare, purple variety of sea cucumber.', season: 'Summer/Fall', time: '6pm-2am', size: '12-37 inches', leftImageSrc: '/image/cucumber_sdv.png', rightImageSrc: '/image/cucumber.png' },// Add more sea creatures as needed
+        { name: 'Cucumber', message: 'A rare, purple variety of sea cucumber.', season: 'Summer/Fall', time: '6pm-2am', size: '12-37 inches', leftImageSrc: '/image/cucumber_sdv.png', rightImageSrc: '/image/cucumber.png' },
+        { name: 'Tilapia', message: 'A primarily vegetarian fish that prefers warm water.', season: 'Fall/Summer', time: '6am-1pm', size: '11-31 inches', leftImageSrc: '/image/tipalia_ori.png', rightImageSrc: '/image/tilapia.png' },
+        { name: 'Lionfish', message: 'An aggressive, predatory fish with venomous spines.', season: 'All seasons', time: 'Anytime', size: '3-13 inches', leftImageSrc: '/image/lionfish_sdv.png', rightImageSrc: '/image/lionfish.png' },
+        { name: 'Red Mullet', message: 'Long ago these were kept as pets.', season: 'Summer/Winter', time: '6am-7pm', size: '8-23 inches', leftImageSrc: '/image/redmullet_sdv.png', rightImageSrc: '/image/redmullet.png' },
+        { name: 'Ms.Angler', message: 'Uses a bioluminescent dangler to attract prey.', season: 'Fall', time: 'Anytime', size: '17-19 inches', leftImageSrc: '/image/angler_sdv.png', rightImageSrc: '/image/angler.png' },
+        { name: 'Shrimp', message: 'Uses a bioluminescent dangler to attract prey.', season: 'Fall', time: 'Anytime', size: '17-19 inches', leftImageSrc: '/image/shrimp_sdv.png', rightImageSrc: '/image/shrimp.png' },
+        { name: 'Discus', message: 'A brightly colored tropical fish that is popular in aquariums.', season: 'All seasons', time: 'Anytime', size: '2-10 inches', leftImageSrc: '/image/discus_sdv.png', rightImageSrc: '/image/discus.png' },
+        { name: 'Seaweed', message: 'It can be used in cooking...', season: 'All seasons', time: 'Anytime', size: 'N/A', leftImageSrc: '/image/seaweed_sdv.png', rightImageSrc: '/image/seaweed.png' },
     ];
 
     // Randomly select a sea creature
@@ -201,16 +212,9 @@ document.getElementById('fishpole').addEventListener('click', function() {
 });
 
 function printPage() {
-    // Show the overlay
-    document.getElementById('overlay').style.display = 'block';
 
     // Print the page
     window.print();
-
-    // Remove the overlay after a short delay (adjust the delay as needed)
-    setTimeout(function () {
-        document.getElementById('overlay').style.display = 'none';
-    }, 1000);
 }
 
 

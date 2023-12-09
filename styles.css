@@ -208,6 +208,16 @@ img:active {
     animation: moveFlOri 3s ease-in-out infinite alternate;
 }
 
+#discus_sdv{
+    position: fixed;
+    top: 350px;
+    right: 355px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    animation: moveFlOri 2.5s ease-in-out infinite alternate;
+}
+
 #fishpole{
     position: fixed;
     bottom: 50px;
@@ -216,14 +226,4 @@ img:active {
     height: 48px;
 }
 
-#overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the darkness */
-    z-index: 1; /* Adjust the z-index as needed */
-}
-
+  
