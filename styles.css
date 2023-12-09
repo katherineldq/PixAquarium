@@ -139,7 +139,7 @@ img:active {
 #para {
     position: absolute;
     width: 500px;
-    top: 10px; /* 调整这个值以确定文字距离 title2 的距离 */
+    top: 10px; 
     left: 10px;
     display: none;
     font-family: 'Courier New', Courier, monospace;
@@ -154,8 +154,8 @@ img:active {
     opacity: 0;
     bottom: 50px;
     right: 120px;
-    transition: opacity 0.5s linear; /* 调整过渡时间和速度曲线 */
-    animation: rotate 4s infinite; /* 调整循环切换时间 */
+    transition: opacity 0.5s linear; 
+    animation: rotate 4s infinite; 
 }
 
 @keyframes rotate {

@@ -190,8 +190,8 @@ currentRightImage = rightImage;
 
 document.getElementById('fishpole').addEventListener('click', function() {
     var seaCreatures = [
-        { name: 'Flounder', message: 'It lives on the bottom, so both eyes are on top of its head.', season: 'Spring/Summer', time: 'Anytime', size: 'Large', leftImageSrc: './image/fl_ori.png', rightImageSrc: './image/flounder.png' },
-        { name: 'Pufferfish', message: 'Inflates when threatened.', season: 'Summer', time: '12pm-4pm', size: 'Small', leftImageSrc: './image/puf_ori.png', rightImageSrc: './image/puffer.png' },
+        { name: 'Flounder', message: 'It lives on the bottom, so both eyes are on top of its head.', season: 'Spring/Summer', time: 'Anytime', size: '4-17 inches', leftImageSrc: './image/fl_ori.png', rightImageSrc: './image/flounder.png' },
+        { name: 'Pufferfish', message: 'Inflates when threatened.', season: 'Summer', time: '12pm-4pm', size: '1-37 inches', leftImageSrc: './image/puf_ori.png', rightImageSrc: './image/puffer.png' },
         { name: 'Octopus', message: 'A mysterious and intelligent creature.', season: 'Summer', time: '6am-1pm', size: '12-49 inches', leftImageSrc: './image/octopus_sdv.png', rightImageSrc: './image/octopus.png' },
         { name: 'Tuna', message: 'A large fish that lives in the ocean.', season: 'Winter/Summer', time: '6am-7pm', size: '12-61 inches', leftImageSrc: './image/tuna_sdv.png', rightImageSrc: './image/tuna.png' },
         { name: 'Cucumber', message: 'A rare, purple variety of sea cucumber.', season: 'Summer/Fall', time: '6pm-2am', size: '12-37 inches', leftImageSrc: './image/cucumber_sdv.png', rightImageSrc: './image/cucumber.png' },
