@@ -5,13 +5,10 @@ document.getElementById('titleaqua').addEventListener('click', function() {
     var para = document.getElementById('para');
     var titleaquaRect = document.getElementById('titleaqua').getBoundingClientRect();
     
-
-    // Set the position below title2
-    para.style.top = (titleaquaRect.bottom + 10) + 'px'; // Adjust the spacing as needed
+    para.style.top = (titleaquaRect.bottom + 10) + 'px'; 
     para.style.left = (titleaquaRect.left + 15) + 'px';
 
 
-    // Toggle the display property
     para.style.display = para.style.display === 'none' ? 'block' : 'none';
 
     if (isInfoBoxVisible && currentInfoBox){
@@ -21,11 +18,11 @@ document.getElementById('titleaqua').addEventListener('click', function() {
 
 });
 
-document.getElementById('fl_ori').addEventListener('click', function() {
+document.getElementById('fl_ori').addEventListener('click', function() {   
     showInfoBox('Flounder', 'It lives on the bottom, so both eyes are on top of its head.', 'Spring/Summer', 'Anytime', '4-17 inches','/image/fl_ori.png', '/image/flounder.png');
 });
 
-document.getElementById('puf_ori').addEventListener('click', function() {
+document.getElementById('puf_ori').addEventListener('click', function() {    
     showInfoBox('Pufferfish', 'Inflates when threatened.', 'Summer', '12pm-4pm', '1-37 inches', '/image/puf_ori.png', '/image/puffer.png');
 });
 
@@ -46,7 +43,7 @@ document.getElementById('cucumber_sdv').addEventListener('click', function() {
 });
 
 document.getElementById('tilapia_sdv').addEventListener('click', function() {
-    showInfoBox('Tilapia', 'A primarily vegetarian fish that prefers warm water.', 'Fall/Summer', '6am-1pm', '11-31 inches','/image/tipalia_ori.png', '/image/tilapia.png');
+    showInfoBox('Tilapia', 'A primarily vegetarian fish that prefers warm water.', 'Fall/Summer', '6am-1pm', '11-31 inches','/image/tilapia_ori.png', '/image/tilapia.png');
 });
 
 document.getElementById('lionfish_sdv').addEventListener('click', function() {
@@ -62,7 +59,7 @@ document.getElementById('angler_sdv').addEventListener('click', function() {
 });
 
 document.getElementById('shrimp_sdv').addEventListener('click', function() {
-    showInfoBox('Shrimp', 'Uses a bioluminescent dangler to attract prey.', 'Fall', 'Anytime', '17-19 inches','/image/shrimp_sdv.png', '/image/shrimp.png');
+    showInfoBox('Shrimp', 'A scavenger that feeds off the ocean floor. Widely prized for its meat.', 'All seasons', 'Anytime', '1-5 inches','/image/shrimp_sdv.png', '/image/shrimp.png');
 });
 
 document.getElementById('discus_sdv').addEventListener('click', function() {
@@ -78,6 +75,7 @@ function showInfoBox(animal, message, season, time, big, leftImageSrc, rightImag
 
    
     var infoBox = document.createElement('div');
+    infoBox.className ="infoBox"
     infoBox.style.zIndex = '998';
     infoBox.style.position = 'fixed';
     infoBox.style.justifyContent = 'center';
@@ -92,7 +90,7 @@ function showInfoBox(animal, message, season, time, big, leftImageSrc, rightImag
     infoBox.style.display = 'block';
 
     infoBox.innerHTML =
-        '<span id="closeIcon" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 24px;">&times;</span>' +
+        '<span id="closeIcon" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 24px;z-index:999999;">&times;</span>' +
         '<p style="text-align: left; margin: 40px 30px 10px 30px; font-family: Courier New; font-size: 24px; font-weight: bolder;">' +
         animal +
         ':</p>' +
@@ -114,30 +112,29 @@ function showInfoBox(animal, message, season, time, big, leftImageSrc, rightImag
         leftDiv.style.height = '200px';
         leftDiv.style.marginTop = '40px';
         leftDiv.style.marginRight = '20px';
-        leftDiv.style.marginLeft = '60px'; // Add margin
+        leftDiv.style.marginLeft = '60px'; 
         leftDiv.style.float = 'left';
     
         // Create image element for Flori
         var leftImage = document.createElement('img');
-        leftImage.src = leftImageSrc; // Dynamic source
+        leftImage.src = leftImageSrc; 
         leftImage.style.width = '90%';
         leftImage.style.height = '90%';
     
-        // Append image to the left div
+        
         leftDiv.appendChild(leftImage);
     
-    
-        // Create right div for image
+
         var rightDiv = document.createElement('div');
         rightDiv.style.width = '350px';
         rightDiv.style.height = '300px';
         rightDiv.style.marginTop = '20px'; 
-        rightDiv.style.marginLeft = '20px'// Add margin
+        rightDiv.style.marginLeft = '20px'
         rightDiv.style.float = 'left';
     
         // Create image element for Flounder or Puffer
         var rightImage = document.createElement('img');
-        rightImage.src = rightImageSrc; // Dynamic source
+        rightImage.src = rightImageSrc; 
         rightImage.style.width = '80%';
         rightImage.style.height = '80%';
         console.log(rightImageSrc)
@@ -146,35 +143,40 @@ function showInfoBox(animal, message, season, time, big, leftImageSrc, rightImag
         }
 
    
-        // Append Flounder image to the right div
         rightDiv.appendChild(rightImage);
 
-    // Append left and right divs to the main infoBox
+   
     infoBox.appendChild(leftDiv);
     infoBox.appendChild(rightDiv);
+   
+var infoboxes = document.getElementsByClassName("infoBox")
+if (infoboxes.length > 0) {
+   // 从第一个元素开始删除，直到倒数第二个元素
+   for (var i = 0; i < infoboxes.length; i++) {
+    infoboxes[i].parentNode.removeChild(infoboxes[i]);
+}
 
-
-
+}
     document.body.appendChild(infoBox);
-
     var closeIcon = document.getElementById('closeIcon');
     closeIcon.style.fontSize = '26px';
-    closeIcon.addEventListener('click', function () {
-        // Hide the info box when close icon is clicked
+    closeIcon.addEventListener('click', function (e) {
+        console.log(e)
+        
         infoBox.style.display = 'none';
-        // Remove the info box from the DOM
-        document.body.removeChild(infoBox);
+       
+
     });
 
- // 设置延迟切换图片操作
+ 
  setTimeout(function () {
-    // Apply a smooth transition by changing the opacity gradually
+    
     rightImage.style.opacity = '0';
     setTimeout(function () {
-        // Change the image source and reset the opacity
+        
         rightImage.src = rightImageSrc.replace('.png', '_pix.png');
         rightImage.style.opacity = '1';
-    }, 100); // Adjust the time based on the transition duration
+    }, 100); 
 }, 1300);
 
 currentInfoBox = infoBox;
@@ -187,14 +189,13 @@ currentRightImage = rightImage;
 
 
 document.getElementById('fishpole').addEventListener('click', function() {
-    // Array of sea creatures with their information
     var seaCreatures = [
         { name: 'Flounder', message: 'It lives on the bottom, so both eyes are on top of its head.', season: 'Spring/Summer', time: 'Anytime', size: 'Large', leftImageSrc: '/image/fl_ori.png', rightImageSrc: '/image/flounder.png' },
         { name: 'Pufferfish', message: 'Inflates when threatened.', season: 'Summer', time: '12pm-4pm', size: 'Small', leftImageSrc: '/image/puf_ori.png', rightImageSrc: '/image/puffer.png' },
         { name: 'Octopus', message: 'A mysterious and intelligent creature.', season: 'Summer', time: '6am-1pm', size: '12-49 inches', leftImageSrc: '/image/octopus_sdv.png', rightImageSrc: '/image/octopus.png' },
         { name: 'Tuna', message: 'A large fish that lives in the ocean.', season: 'Winter/Summer', time: '6am-7pm', size: '12-61 inches', leftImageSrc: '/image/tuna_sdv.png', rightImageSrc: '/image/tuna.png' },
         { name: 'Cucumber', message: 'A rare, purple variety of sea cucumber.', season: 'Summer/Fall', time: '6pm-2am', size: '12-37 inches', leftImageSrc: '/image/cucumber_sdv.png', rightImageSrc: '/image/cucumber.png' },
-        { name: 'Tilapia', message: 'A primarily vegetarian fish that prefers warm water.', season: 'Fall/Summer', time: '6am-1pm', size: '11-31 inches', leftImageSrc: '/image/tipalia_ori.png', rightImageSrc: '/image/tilapia.png' },
+        { name: 'Tilapia', message: 'A primarily vegetarian fish that prefers warm water.', season: 'Fall/Summer', time: '6am-1pm', size: '11-31 inches', leftImageSrc: '/image/tilapia_pix.png', rightImageSrc: '/image/tilapia.png' },
         { name: 'Lionfish', message: 'An aggressive, predatory fish with venomous spines.', season: 'All seasons', time: 'Anytime', size: '3-13 inches', leftImageSrc: '/image/lionfish_sdv.png', rightImageSrc: '/image/lionfish.png' },
         { name: 'Red Mullet', message: 'Long ago these were kept as pets.', season: 'Summer/Winter', time: '6am-7pm', size: '8-23 inches', leftImageSrc: '/image/redmullet_sdv.png', rightImageSrc: '/image/redmullet.png' },
         { name: 'Ms.Angler', message: 'Uses a bioluminescent dangler to attract prey.', season: 'Fall', time: 'Anytime', size: '17-19 inches', leftImageSrc: '/image/angler_sdv.png', rightImageSrc: '/image/angler.png' },
@@ -207,13 +208,10 @@ document.getElementById('fishpole').addEventListener('click', function() {
     var randomIndex = Math.floor(Math.random() * seaCreatures.length);
     var selectedCreature = seaCreatures[randomIndex];
 
-    // Show the info box for the selected sea creature
     showInfoBox(selectedCreature.name, selectedCreature.message, selectedCreature.season, selectedCreature.time, selectedCreature.size, selectedCreature.leftImageSrc, selectedCreature.rightImageSrc);
 });
 
 function printPage() {
-
-    // Print the page
     window.print();
 }
 

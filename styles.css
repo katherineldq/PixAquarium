@@ -17,8 +17,7 @@ body {
 }
 
 img {
-    object-fit: cover;
-    transition: 100ms; /* Adjust the transition duration as needed */
+    transition: 100ms; 
 }
 
 img:hover {
