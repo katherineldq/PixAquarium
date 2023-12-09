@@ -190,18 +190,18 @@ currentRightImage = rightImage;
 
 document.getElementById('fishpole').addEventListener('click', function() {
     var seaCreatures = [
-        { name: 'Flounder', message: 'It lives on the bottom, so both eyes are on top of its head.', season: 'Spring/Summer', time: 'Anytime', size: 'Large', leftImageSrc: '/image/fl_ori.png', rightImageSrc: '/image/flounder.png' },
-        { name: 'Pufferfish', message: 'Inflates when threatened.', season: 'Summer', time: '12pm-4pm', size: 'Small', leftImageSrc: '/image/puf_ori.png', rightImageSrc: '/image/puffer.png' },
-        { name: 'Octopus', message: 'A mysterious and intelligent creature.', season: 'Summer', time: '6am-1pm', size: '12-49 inches', leftImageSrc: '/image/octopus_sdv.png', rightImageSrc: '/image/octopus.png' },
-        { name: 'Tuna', message: 'A large fish that lives in the ocean.', season: 'Winter/Summer', time: '6am-7pm', size: '12-61 inches', leftImageSrc: '/image/tuna_sdv.png', rightImageSrc: '/image/tuna.png' },
-        { name: 'Cucumber', message: 'A rare, purple variety of sea cucumber.', season: 'Summer/Fall', time: '6pm-2am', size: '12-37 inches', leftImageSrc: '/image/cucumber_sdv.png', rightImageSrc: '/image/cucumber.png' },
-        { name: 'Tilapia', message: 'A primarily vegetarian fish that prefers warm water.', season: 'Fall/Summer', time: '6am-1pm', size: '11-31 inches', leftImageSrc: '/image/tilapia_pix.png', rightImageSrc: '/image/tilapia.png' },
-        { name: 'Lionfish', message: 'An aggressive, predatory fish with venomous spines.', season: 'All seasons', time: 'Anytime', size: '3-13 inches', leftImageSrc: '/image/lionfish_sdv.png', rightImageSrc: '/image/lionfish.png' },
-        { name: 'Red Mullet', message: 'Long ago these were kept as pets.', season: 'Summer/Winter', time: '6am-7pm', size: '8-23 inches', leftImageSrc: '/image/redmullet_sdv.png', rightImageSrc: '/image/redmullet.png' },
-        { name: 'Ms.Angler', message: 'Uses a bioluminescent dangler to attract prey.', season: 'Fall', time: 'Anytime', size: '17-19 inches', leftImageSrc: '/image/angler_sdv.png', rightImageSrc: '/image/angler.png' },
-        { name: 'Shrimp', message: 'Uses a bioluminescent dangler to attract prey.', season: 'Fall', time: 'Anytime', size: '17-19 inches', leftImageSrc: '/image/shrimp_sdv.png', rightImageSrc: '/image/shrimp.png' },
-        { name: 'Discus', message: 'A brightly colored tropical fish that is popular in aquariums.', season: 'All seasons', time: 'Anytime', size: '2-10 inches', leftImageSrc: '/image/discus_sdv.png', rightImageSrc: '/image/discus.png' },
-        { name: 'Seaweed', message: 'It can be used in cooking...', season: 'All seasons', time: 'Anytime', size: 'N/A', leftImageSrc: '/image/seaweed_sdv.png', rightImageSrc: '/image/seaweed.png' },
+        { name: 'Flounder', message: 'It lives on the bottom, so both eyes are on top of its head.', season: 'Spring/Summer', time: 'Anytime', size: 'Large', leftImageSrc: './image/fl_ori.png', rightImageSrc: './image/flounder.png' },
+        { name: 'Pufferfish', message: 'Inflates when threatened.', season: 'Summer', time: '12pm-4pm', size: 'Small', leftImageSrc: './image/puf_ori.png', rightImageSrc: './image/puffer.png' },
+        { name: 'Octopus', message: 'A mysterious and intelligent creature.', season: 'Summer', time: '6am-1pm', size: '12-49 inches', leftImageSrc: './image/octopus_sdv.png', rightImageSrc: './image/octopus.png' },
+        { name: 'Tuna', message: 'A large fish that lives in the ocean.', season: 'Winter/Summer', time: '6am-7pm', size: '12-61 inches', leftImageSrc: './image/tuna_sdv.png', rightImageSrc: './image/tuna.png' },
+        { name: 'Cucumber', message: 'A rare, purple variety of sea cucumber.', season: 'Summer/Fall', time: '6pm-2am', size: '12-37 inches', leftImageSrc: './image/cucumber_sdv.png', rightImageSrc: './image/cucumber.png' },
+        { name: 'Tilapia', message: 'A primarily vegetarian fish that prefers warm water.', season: 'Fall/Summer', time: '6am-1pm', size: '11-31 inches', leftImageSrc: './image/tilapia_pix.png', rightImageSrc: './image/tilapia.png' },
+        { name: 'Lionfish', message: 'An aggressive, predatory fish with venomous spines.', season: 'All seasons', time: 'Anytime', size: '3-13 inches', leftImageSrc: './image/lionfish_sdv.png', rightImageSrc: './image/lionfish.png' },
+        { name: 'Red Mullet', message: 'Long ago these were kept as pets.', season: 'Summer/Winter', time: '6am-7pm', size: '8-23 inches', leftImageSrc: './image/redmullet_sdv.png', rightImageSrc: './image/redmullet.png' },
+        { name: 'Ms.Angler', message: 'Uses a bioluminescent dangler to attract prey.', season: 'Fall', time: 'Anytime', size: '17-19 inches', leftImageSrc: './image/angler_sdv.png', rightImageSrc: './image/angler.png' },
+        { name: 'Shrimp', message: 'Uses a bioluminescent dangler to attract prey.', season: 'Fall', time: 'Anytime', size: '17-19 inches', leftImageSrc: './image/shrimp_sdv.png', rightImageSrc: './image/shrimp.png' },
+        { name: 'Discus', message: 'A brightly colored tropical fish that is popular in aquariums.', season: 'All seasons', time: 'Anytime', size: '2-10 inches', leftImageSrc: './image/discus_sdv.png', rightImageSrc: './image/discus.png' },
+        { name: 'Seaweed', message: 'It can be used in cooking...', season: 'All seasons', time: 'Anytime', size: 'N/A', leftImageSrc: './image/seaweed_sdv.png', rightImageSrc: './image/seaweed.png' },
     ];
 
     // Randomly select a sea creature
