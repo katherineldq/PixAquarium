@@ -169,12 +169,12 @@ img:active {
 
 #seaweed_sdv {
     position: fixed;
-    bottom: 450px;
+    bottom: 430px;
     left: 220px;
     width: 48px;
     height: 48px;
     object-fit: cover;
-    animation: moveFlOri 3s ease-in-out infinite alternate;
+    animation: moveFlOri 2.5s ease-in-out infinite alternate;
 }
 
 #redmullet_sdv{
